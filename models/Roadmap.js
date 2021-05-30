@@ -25,18 +25,18 @@ const roadmapSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "User",
     },
-    resources: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: "Resource",
-      },
-    ],
-    enrollments: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: "Enrollment",
-      },
-    ],
+    // resources: [
+    //   {
+    //     type: Schema.Types.ObjectId,
+    //     ref: "Resource",
+    //   },
+    // ],
+    // enrollments: [
+    //   {
+    //     type: Schema.Types.ObjectId,
+    //     ref: "Enrollment",
+    //   },
+    // ],
   },
   {
     timestamps: true,

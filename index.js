@@ -7,6 +7,7 @@ const authRoutes = require("./routes/authRoutes");
 const mediaRoutes = require("./routes/mediaRoutes");
 const roadmapRoutes = require("./routes/roadmapRoutes");
 const categoryRoutes = require("./routes/categoryRoutes");
+const resourceRoutes = require("./routes/resourceRoutes");
 
 const app = express();
 app.use(cors());
@@ -15,6 +16,7 @@ app.use(express.json());
 app.use("/api", mediaRoutes);
 app.use("/api", roadmapRoutes);
 app.use("/api", categoryRoutes);
+app.use("/api", resourceRoutes);
 app.use("/api/auth", authRoutes);
 
 const { PORT, DB_USER, DB_PASSWORD, DB_NAME } = process.env;

@@ -10,5 +10,15 @@ router.post(
   middlewares.checkAuth,
   roadmapController.createRoadmap
 );
+router.put(
+  "/roadmaps/:roadmapId",
+  middlewares.checkAuth,
+  roadmapController.updateRoadmap
+);
+router.delete(
+  "/roadmaps/:roadmapId",
+  middlewares.checkAuth,
+  roadmapController.deleteRoadmap
+);
 
 module.exports = router;

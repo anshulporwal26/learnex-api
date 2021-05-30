@@ -8,7 +8,7 @@ router.get("/categories", categoryController.getCategories);
 router.post(
   "/categories",
   middlewares.checkAuth,
-  categoryController.addCategory
+  categoryController.createCategory
 );
 router.put(
   "/categories/:categoryId",

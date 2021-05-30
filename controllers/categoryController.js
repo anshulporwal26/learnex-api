@@ -12,7 +12,7 @@ exports.getCategories = async (req, res) => {
   }
 };
 
-exports.addCategory = async (req, res) => {
+exports.createCategory = async (req, res) => {
   try {
     const category = new Category({ ...req.body.category });
     const savedCategory = await category.save();

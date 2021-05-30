@@ -17,7 +17,7 @@ const resourceSchema = new Schema(
     },
     thumbnail: {
       type: String,
-      required: true,
+      required: false,
     },
     roadmap: {
       type: Schema.Types.ObjectId,
