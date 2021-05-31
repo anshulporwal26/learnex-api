@@ -5,6 +5,11 @@ const roadmapController = require("../controllers/roadmapController");
 const middlewares = require("../middlewares");
 
 router.get("/roadmaps", roadmapController.getRoadmaps);
+router.get(
+  "/categories/:categoryId/roadmaps",
+  middlewares.checkAuth,
+  roadmapController.getRoadmapsByCategory
+);
 router.post(
   "/roadmaps",
   middlewares.checkAuth,

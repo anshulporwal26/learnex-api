@@ -15,6 +15,20 @@ exports.getRoadmaps = async (req, res) => {
   }
 };
 
+exports.getRoadmapsByCategory = async (req, res) => {
+  try {
+    const { categoryId } = req.params;
+    const roadmaps = await Roadmap.find({ categories: categoryId })
+      .populate("category")
+      .populate("expert", "name profileImageUrl isVerified");
+    return res.status(200).json(roadmaps);
+  } catch (err) {
+    return res.status(400).json({
+      error: errorHandler.getErrorMessage(err),
+    });
+  }
+};
+
 exports.createRoadmap = async (req, res) => {
   try {
     const roadmap = new Roadmap({

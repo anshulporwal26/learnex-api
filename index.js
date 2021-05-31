@@ -9,6 +9,7 @@ const roadmapRoutes = require("./routes/roadmapRoutes");
 const categoryRoutes = require("./routes/categoryRoutes");
 const resourceRoutes = require("./routes/resourceRoutes");
 const enrollmentRoutes = require("./routes/enrollmentRoutes");
+const profileRoutes = require("./routes/profileRoutes");
 
 const app = express();
 app.use(cors());
@@ -19,6 +20,7 @@ app.use("/api", roadmapRoutes);
 app.use("/api", categoryRoutes);
 app.use("/api", resourceRoutes);
 app.use("/api", enrollmentRoutes);
+app.use("/api", profileRoutes);
 app.use("/api/auth", authRoutes);
 
 const { PORT, DB_USER, DB_PASSWORD, DB_NAME } = process.env;

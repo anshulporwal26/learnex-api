@@ -37,11 +37,7 @@ const userSchema = new mongoose.Schema(
     role: {
       type: String,
       default: "basic",
-      enum: ["basic", "supervisor", "admin"],
-    },
-    isExpert: {
-      type: Boolean,
-      default: false,
+      enum: ["basic", "supervisor", "admin", "expert"],
     },
     tags: {
       type: [String],
