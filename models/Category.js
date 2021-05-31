@@ -10,6 +10,12 @@ const categorySchema = new Schema(
     icon: {
       type: String,
     },
+    slug: {
+      type: String,
+      required: true,
+      unique: true,
+      trim: true,
+    },
   },
   {
     timestamps: true,
